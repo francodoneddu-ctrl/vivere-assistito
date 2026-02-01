@@ -1,0 +1,63 @@
+:root{
+  --bg:#0b1220;
+  --card:#111a2e;
+  --muted:#9fb0d0;
+  --text:#eaf0ff;
+  --accent:#6aa6ff;
+  --accent2:#9dffb0;
+  --border:rgba(255,255,255,.10);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;background:linear-gradient(180deg,#070c16 0%, #0b1220 60%, #070c16 100%);color:var(--text)}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:980px;margin:0 auto;padding:28px 18px}
+.nav{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:18px}
+.brand{display:flex;gap:10px;align-items:center}
+.logo{width:44px;height:44px;border-radius:14px;overflow:hidden;display:block;flex:0 0 auto;box-shadow:0 10px 30px rgba(106,166,255,.25)}
+.logo img{width:100%;height:100%;display:block;object-fit:cover}
+.brand h1{font-size:18px;margin:0;font-weight:700;letter-spacing:.3px}
+.navlinks{display:flex;gap:14px;flex-wrap:wrap;font-size:14px}
+.hero{border:1px solid var(--border);background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border-radius:20px;padding:22px 18px;box-shadow:0 18px 55px rgba(0,0,0,.35)}
+.hero h2{margin:0 0 10px 0;font-size:30px;line-height:1.15}
+.hero p{margin:0 0 16px 0;color:var(--muted);font-size:16px;line-height:1.5}
+.ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.hero .ctaRow .btn{height:52px}
+.btn.iconOnly{width:52px;padding:0;border-radius:14px;overflow:hidden}
+.btn.iconOnly img{width:100%;height:100%;display:block;object-fit:cover}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 14px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.06);color:var(--text);font-weight:600;font-size:14px}
+.btn.primary{background:linear-gradient(90deg, rgba(106,166,255,.95), rgba(157,255,176,.75));color:#06101f;border:none}
+.btn.primary:hover{filter:brightness(1.03)}
+
+/* Icona disabili che riempie il bottone (testo nascosto ma mantiene la larghezza) */
+.btn.iconFill{position:relative;overflow:hidden}
+.btn.iconFill .label{opacity:0}
+.btn.iconFill svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.btn.iconFill svg path{fill:currentColor}
+.note{font-size:12px;color:rgba(234,240,255,.78);margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(12, 1fr);gap:14px;margin-top:16px}
+.card{grid-column:span 6;border:1px solid var(--border);background:rgba(255,255,255,.03);border-radius:18px;padding:16px}
+.card h3{margin:0 0 8px 0;font-size:16px}
+.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.45}
+.card.small{grid-column:span 4}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:rgba(234,240,255,.85);border:1px solid var(--border);border-radius:999px;padding:6px 10px;margin-bottom:10px;background:rgba(255,255,255,.03)}
+hr.sep{border:none;border-top:1px solid var(--border);margin:20px 0}
+.footer{margin-top:26px;color:rgba(234,240,255,.6);font-size:12px;display:flex;gap:12px;flex-wrap:wrap}
+.kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;border:1px solid var(--border);background:rgba(255,255,255,.04);padding:2px 6px;border-radius:8px}
+.form{margin-top:14px}
+.q{border:1px solid var(--border);border-radius:18px;padding:14px 14px;margin:10px 0;background:rgba(255,255,255,.03)}
+.q legend{font-weight:700;font-size:14px;margin-bottom:8px}
+.opts{display:grid;gap:8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:10px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.02)}
+.opt input{margin-top:3px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.alert{border:1px solid rgba(255,120,120,.35);background:rgba(255,120,120,.08);color:rgba(255,220,220,.95);padding:10px 12px;border-radius:14px;font-size:13px;margin-top:10px;display:none}
+.result h2{margin:0 0 8px 0}
+.block{border:1px solid var(--border);background:rgba(255,255,255,.03);border-radius:18px;padding:14px 14px;margin:12px 0}
+.block h3{margin:0 0 8px 0;font-size:16px}
+.block ul{margin:8px 0 0 18px;color:rgba(234,240,255,.85)}
+.block p{margin:0;color:var(--muted);line-height:1.5}
+.tag{display:inline-block;font-size:12px;padding:4px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.03);color:rgba(234,240,255,.85);margin-right:8px}
+
+.disclosure{flex-basis:100%;opacity:.85;line-height:1.4}
+
